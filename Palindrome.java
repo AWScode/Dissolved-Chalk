@@ -10,23 +10,12 @@ import java.util.*;
 public class Palindrome {
 
     public static boolean palindromeCheck(String test) {
-      if(test.length()%2==0){
-        int half = test.length()/2;
-        String firstHalf = test.substring(0,half-1);
-        String secondHalf = test.substring((half),(test.length()-1));
-        String haha = new StringBuilder(secondHalf).reverse().toString();
-        if(firstHalf.equals(haha))
-          {return true;}
-        else {return false;}
-      }
-      else{
-        int half = test.length()/2;
-        String firstHalf = test.substring(0,half-1);
-        String secondHalf = test.substring((half),(test.length()-1));
-        String haha = new StringBuilder(secondHalf).reverse().toString();
-        if(firstHalf.equals(haha)){return true;}
-        else {return false;}
-    }
+      if(test.length()==0 || test.length()==1)
+        return true;
+      if(test.charAt(0)==test.charAt(test.length()-1))
+        return palindromeCheck(test.substring(1, test.length()-1));
+        return false;
+
   }
 
     public static void main(String[] args) {
