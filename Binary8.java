@@ -17,7 +17,7 @@ public class Binary8 {
     String which= heyo3.nextLine();
 
     //first number
-    int nNum1 []=new int[8];
+    int nNum1 []=new int[9];
     for (int i=0; i<8; i++) {
       if(i<num1.length()){
         int num1Length =num1.length()-1;
@@ -30,7 +30,7 @@ public class Binary8 {
     }
 
     //second number
-    int nNum2 []=new int[8];
+    int nNum2 []=new int[9];
     for (int j=0; j<8; j++) {//pretty sure I could keep i as the int variable but...just to be safe I'll use j :)
       if(j<num2.length()){
         int num2Length =num2.length()-1;
@@ -168,16 +168,20 @@ public class Binary8 {
     Binary8 onlyDivi = new Binary8();
     int theResult [] = new int [8];
     theResult = n1;
-    int length = 0;
-    while(length<=n1.length){
+    int length = n1.length;
+    for(int n=0; n<length; n++){
+      if(Arrays.toString(theResult)==("[0, 0, 0, 0, 0, 0, 0, 0]")){
+        length=9;
+        break;}
+      else {theResult = onlyDivi.bSubtraction(theResult,n2);
+    }}
+    /*while(n<length+1){
       if(Arrays.toString(theResult)==("[0, 0, 0, 0, 0, 0, 0, 0]")){
         length=9;
         break;}
       else {theResult = onlyDivi.bSubtraction(theResult,n2);
       //System.out.println (Arrays.toString(theResult));
       length++;}
-    }
-    return theResult;
-  }
-
-} //end of everything
+    }*/
+    return theResult;}
+  } //end of everything
