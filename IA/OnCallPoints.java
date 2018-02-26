@@ -39,6 +39,7 @@ public class OnCallPoints{
     }
     else{if(a.getWeekday().equalsIgnoreCase("Sunday") && a.getPM() == true){sundayPMNum++;}else{weekendNum++;}}
   }
+
   public int getWeekdayTotal(){return weekdayNum;}
   public int getWeekdayPMTotal(){return weekdayPMNum * 3;}
   public int getWeekendTotal(){return weekendNum * 4;}
