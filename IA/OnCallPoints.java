@@ -55,8 +55,8 @@ public class OnCallPoints{
     totalOnCall = weekdayNum+weekdayPMNum+weekendNum+sundayPMNum+holidayNum;
     return totalOnCall;
   }
-  public void addToMonth(Date a){
+  public void addToMonth(Date b){
     for(int i=0;i<13;i++){
-      if(a.getMonth() == i){monthArray[i] = overallTotal;}
+      if(b.getMonth() == i){monthArray[i] = overallTotal;}
   }
 }}

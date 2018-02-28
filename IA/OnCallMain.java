@@ -34,8 +34,6 @@ public class OnCallMain{
       newDay.setWeekday(engDay);
       newOCP.addPoint(newDay);
 
-      newOCP.get
-
 
       totalOnCall++;
       overallTotal =overallTotal + newOCP.getOverallTotal();
