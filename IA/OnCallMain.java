@@ -1,7 +1,26 @@
 import java.util.*;
+import java.awt.*;
+import java.awt.Frame;
 
-public class OnCallMain{
+public class OnCallMain extends Frame{
+  private Label firstLbl;
+  private Button firstBtn;
+  private Panel one;
+
+
+  public OnCallMain(){
+    setLayout(new FlowLayout());
+    firstLbl = new Label ("Enter on call dates");
+    add (firstLbl);
+    one = new Panel();
+    firstBtn = new Button("test");
+    add (firstBtn);
+    setVisible(true);
+  }
   public static void main(String[] arg){
+
+    OnCallMain format = new OnCallMain();
+    format.show();
 
     Scanner times = new Scanner(System.in);
     System.out.println("How many on call times to report?");
