@@ -3,24 +3,28 @@ import java.awt.*;
 import java.awt.Frame;
 
 public class OnCallMain extends Frame{
-  private Label firstLbl;
-  private Button firstBtn;
-  private Panel one;
-
 
   public OnCallMain(){
     setLayout(new FlowLayout());
-    firstLbl = new Label ("Enter on call dates");
+    Label firstLbl = new Label ("Enter call dates");
+    firstLbl.setBounds(200,100,100,30);
     add (firstLbl);
-    one = new Panel();
-    firstBtn = new Button("test");
+    TextField input = new TextField("Month",30);
+    add(input);
+    input.setBounds(200,150,80,30);
+
+
+    Panel one = new Panel();
+    Button firstBtn = new Button("test");
+    //firstBtn.setBounds(250,100,80,30);
     add (firstBtn);
+    setSize(500,500);
+    setLayout(null);
     setVisible(true);
   }
   public static void main(String[] arg){
 
     OnCallMain format = new OnCallMain();
-    format.show();
 
     Scanner times = new Scanner(System.in);
     System.out.println("How many on call times to report?");
