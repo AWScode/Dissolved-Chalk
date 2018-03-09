@@ -9,10 +9,17 @@ public class OnCallMain extends Frame{
     Label firstLbl = new Label ("Enter call dates");
     firstLbl.setBounds(200,100,100,30);
     add (firstLbl);
-    TextField input = new TextField("Month",30);
-    add(input);
-    input.setBounds(200,150,80,30);
+    TextField inputM = new TextField("Month");
+    add(inputM);
+    inputM.setBounds(145,150,55,30);
 
+    TextField inputD = new TextField("Day");
+    add(inputD);
+    inputD.setBounds(200,150,50,30);
+
+    TextField inputY = new TextField("Year");
+    add(inputY);
+    inputY.setBounds(250,150,50,30);
 
     Panel one = new Panel();
     Button firstBtn = new Button("test");
