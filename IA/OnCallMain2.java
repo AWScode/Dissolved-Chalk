@@ -3,13 +3,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Frame;
 
-public class OnCallMain extends Frame{
+public class OnCallMain2 extends Frame{
   Button firstBtn = new Button("Enter");
   TextField inputM = new TextField("Month");
   TextField inputD = new TextField("Day");
   TextField inputY = new TextField("Year");
 
-  public OnCallMain(){
+  public OnCallMain2(){
     setLayout(new FlowLayout());
     Label firstLbl = new Label ("Enter call dates");
     firstLbl.setBounds(200,100,100,30);
@@ -30,7 +30,7 @@ public class OnCallMain extends Frame{
     firstBtn.setBounds(250,200,80,30);
     add (firstBtn);
     setSize(500,500);
-    firstBtn.addActionListener(this, newDay);
+    firstBtn.addActionListener(this);
 
 
     setLayout(null);
@@ -38,7 +38,7 @@ public class OnCallMain extends Frame{
   }
   public static void main(String[] arg){
 
-    new OnCallMain();
+    new OnCallMain2();
 
     Date newDay = new Date();
 
@@ -79,10 +79,7 @@ public class OnCallMain extends Frame{
     System.out.println(overallTotal);
   }
   public static ActionListener taskPerformer = new ActionListener(){
-  public void actionPerformed(ActionEvent a, Date b){
-    if(a.getSource() == firstBtn){
-      b.setMonth(inputM);
-      b.setDay(inputD);
-      b.setYear(inputY);}
+  public void actionPerformed(ActionEvent a){
+    String value = inputM.getText();
   }};
 }
