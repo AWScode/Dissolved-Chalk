@@ -3,46 +3,24 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Frame;
 
-public class OnCallMain2 extends Frame{
-  Button firstBtn = new Button("Enter");
-  TextField inputM = new TextField("Month");
-  TextField inputD = new TextField("Day");
-  TextField inputY = new TextField("Year");
-
-  public OnCallMain2(){
-    setLayout(new FlowLayout());
-    Label firstLbl = new Label ("Enter call dates");
-    firstLbl.setBounds(200,100,100,30);
-    add (firstLbl);
-
-    add(inputM);
-    inputM.setBounds(145,150,55,30);
-    //inputM.addActionListener(this);
-
-    add(inputD);
-    inputD.setBounds(200,150,50,30);
-    //inputD.addActionListener(this);
-
-    add(inputY);
-    inputY.setBounds(250,150,50,30);
-
-    //Panel one = new Panel();
-    firstBtn.setBounds(250,200,80,30);
-    add (firstBtn);
-    setSize(500,500);
-    firstBtn.addActionListener(this);
+public class OnCallMain2 {
 
 
-    setLayout(null);
-    setVisible(true);
-  }
   public static void main(String[] arg){
+    //Button tst = newFrame.getButton();
 
-    new OnCallMain2();
+    OnCallFrame newFrame = new OnCallFrame();
 
     Date newDay = new Date();
 
-    Scanner times = new Scanner(System.in);
+    OnCallMain2 testOne = new OnCallMain2();
+
+    //newDay.setDay(newFrame.getDays());
+    int firstDay = newFrame.getDays();
+    System.out.println(firstDay);
+
+
+    /* Scanner times = new Scanner(System.in);
     System.out.println("How many on call times to report?");
     int callNum = times.nextInt();
 
@@ -51,6 +29,8 @@ public class OnCallMain2 extends Frame{
 
     int totalOnCall = 0;
     int overallTotal = 0;
+
+
 
     for(int i=0; i<callNum; i++){
       System.out.println("When were you on call? (month/day/year)"); //ex. 01/01/18
@@ -76,10 +56,7 @@ public class OnCallMain2 extends Frame{
       totalOnCall++;
       overallTotal =overallTotal + newOCP.getOverallTotal();
     }
-    System.out.println(overallTotal);
+    System.out.println(overallTotal); */
   }
-  public static ActionListener taskPerformer = new ActionListener(){
-  public void actionPerformed(ActionEvent a){
-    String value = inputM.getText();
-  }};
+
 }
