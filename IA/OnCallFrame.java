@@ -7,7 +7,7 @@ public class OnCallFrame extends Frame implements ActionListener{
   Button firstBtn = new Button("Enter");
   TextField inputM;
   TextField inputD;
-  //int days1;
+  int days1;
   TextField inputY;
 
   /*public void actionPerformed (ActionEvent e){
@@ -40,6 +40,9 @@ public class OnCallFrame extends Frame implements ActionListener{
     add (firstBtn);
     setSize(500,500);
     firstBtn.addActionListener(this);
+    String a = inputD.getText();
+    days1 = Integer.parseInt(a);
+    System.out.println(days1);
 
 
     setLayout(null);
@@ -50,10 +53,7 @@ public class OnCallFrame extends Frame implements ActionListener{
     }
 
     public int setDays(){
-    int days1=0;
-    firstBtn.addActionListener(new ActionListener(){
-      String a = inputD.getText();
-      days1 = Integer.parseInt(a);});
+    firstBtn.addActionListener(this);
     return days1;
     }
 
