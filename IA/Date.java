@@ -50,4 +50,18 @@ public class Date {
   public boolean getHoliday(){
     return holiday;
   }
+  public String returnWeekday(int a){
+    if(a == 1){return "Sunday";}
+    else{if(a == 2){return "Monday";}
+      else{if(a == 3){return "Tuesday";}
+        else{if(a == 4){return "Wednesday";}
+          else{if(a == 5){return "Thursday";}
+            else{if(a == 6){return "Friday";}
+              else{return "Saturday";}
+            }
+          }
+        }
+      }
+    }
+  }
 }

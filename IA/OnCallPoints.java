@@ -1,3 +1,5 @@
+//import javax.swing.table.DefaultTableCellRenderer;
+//import javax.swing.*;
 
 public class OnCallPoints{
   private int monthTotal;
@@ -58,5 +60,10 @@ public class OnCallPoints{
   public void addToMonth(Date b){
     for(int i=0;i<13;i++){
       if(b.getMonth() == i){monthArray[i] = overallTotal;}
-  }
-}}
+  }}
+  /*public void setTable(JTable a){
+    a.getColumn(0).set
+    a.getRow(0).setCellRenderer(FormatRenderer.)
+
+  }*/
+}
